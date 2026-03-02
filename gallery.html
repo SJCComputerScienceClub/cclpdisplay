@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Gallery Timeline</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="page">
+<h1>Gallery Timeline</h1>
+<p>Moments from decades of Cadet Corps history.</p>
+
+
+<div class="timeline">
+<div class="timeline-track">
+<img src="event1.jpg" onclick="openModal(this, 'Founding Ceremony')" />
+<img src="event2.jpg" onclick="openModal(this, 'Historic Parade')" />
+<img src="event3.jpg" onclick="openModal(this, 'Leadership Retreat')" />
+<!-- duplicate images for seamless loop -->
+<img src="event1.jpg" onclick="openModal(this, 'Founding Ceremony')" />
+<img src="event2.jpg" onclick="openModal(this, 'Historic Parade')" />
+</div>
+</div>
+</div>
+
+
+<div class="modal" id="modal" onclick="closeModal()">
+<div class="modal-content">
+<img id="modalImg" />
+<p id="modalText"></p>
+</div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

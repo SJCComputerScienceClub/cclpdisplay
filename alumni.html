@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Coming Soon</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="page">
+<h1>Traditions</h1>
+<p>Explore the proud traditions that define our Cadet Corps leadership program.</p>
+
+
+<div class="scroll-row">
+<img src="alumni1.jpg" onclick="openModal(this, 'Distinguished Alumnus – Class of 1995')" />
+<img src="alumni2.jpg" onclick="openModal(this, 'Cadet Commander – Class of 2001')" />
+<img src="alumni3.jpg" onclick="openModal(this, 'Service Award Recipient')" />
+</div>
+</div>
+
+
+<div class="modal" id="modal" onclick="closeModal()">
+<div class="modal-content">
+<img id="modalImg" />
+<p id="modalText"></p>
+</div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #8b0000; /* scarlet */
+  color: white;
+}
+
+h1, h2 {
+  color: #cfcfcf; /* gray */
+}
+
+.landing .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+}
+
+.quad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.2);
+  transition: background 0.3s;
+}
+
+.quad:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+.page {
+  padding: 40px;
+}
+
+/* Horizontal scroll (Traditions) */
+.scroll-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.scroll-row img {
+  height: 180px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Gallery timeline */
+.timeline {
+  display: flex;
+  overflow: hidden;
+}
+
+.timeline-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.timeline img {
+  height: 150px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #7a0000;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.modal img {
+  max-width: 100%;
+  border-radius: 10px;
+}
