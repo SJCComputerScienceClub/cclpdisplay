@@ -17,11 +17,31 @@
 <h2>Would you pass the 2025 Promotion Board Review?</h2>
 <p>1.) When was St. John's foudned?</p>
   <ol>
-    <li><button onlick="alert('Nope!');">1776</button></li>
-    <li><button onlick="alert('Nope!');">1991</button></li>
-    <li><button onlick="alert('Nope!');">1915</button></li>
-    <li><button onlick="alert('Correct!');">1851</button></li>
+    <li><button id="o1q1">1776</button></li>
+    <li><button id="o2q1">1991</button></li>
+    <li><button id="o3q1">1915</button></li>
+    <li><button id="o4q1">1851</button></li>
   </ol>
 </div>
+<script>
+  option1Question1 = document.getElementbyId("o1q1");
+  option2Question1 = documnet.getElementById("o2q1");
+  option3Question1= documnet.getElementById("o3q1");
+  option4Question1 = documnet.getElementById("o4q1");
+
+  option1Question1.addEventListener("click", function() {
+    alert('Incorrect.');
+  }); 
+  option2Question1.addEventListener("click", function() {
+    alert('Incorrect.');
+  }); 
+  option3Question1.addEventListener("click", function() {
+    alert('Incorrect.');
+  }); 
+  option4Question1.addEventListener("click", function() {
+    alert('Correct.');
+  }); 
+  
+</script>
 </body>
 </html>
