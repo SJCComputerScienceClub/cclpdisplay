@@ -98,3 +98,48 @@ h1, h2 {
   max-width: 100%;
   border-radius: 10px;
 }
+
+/* Traditions Grid Layout */
+.traditions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 across for iPad */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Individual Cards */
+.tradition-card {
+  position: relative;
+  height: 180px;
+  border-radius: 15px;
+  border: 4px solid rgba(255,255,255,0.7); /* medium thickness */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.tradition-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+/* Text styling */
+.tradition-card span {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Optional: hover effect (nice on desktop, subtle on iPad) */
+.tradition-card:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s;
+}
