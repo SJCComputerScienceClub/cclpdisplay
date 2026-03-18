@@ -1,4 +1,4 @@
-<script>
+
 const detailView = document.getElementById("detailView");
 const detailContent = document.getElementById("detailContent");
 
@@ -64,4 +64,3 @@ function closeDetail() {
     card.style.transform = ""; // reset
   }, 300);
 }
-</script>
