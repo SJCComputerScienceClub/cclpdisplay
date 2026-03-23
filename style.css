@@ -1,4 +1,4 @@
-
+/* CSS for index.html */
 * { box-sizing: border-box; }
 
 body {
@@ -8,6 +8,18 @@ body {
   color: white;
 }
 
+.center-logo {
+  z-index: 5;
+}
+.landing .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+
+  gap: 0;          
+  padding: 0;      
+}
 h1, h2 {
   color: #cfcfcf; /* gray */
 }
@@ -26,34 +38,50 @@ h1, h2 {
   font-size: 2rem;
   text-decoration: none;
   color: white;
-  border: 2px solid rgba(255,255,255,0.2);
-  transition: background 0.3s;
+
+  /* straight-edged frame */
+  border: 4px solid rgba(255,255,255,0.85);
+  border-radius: 0;
+  margin: 5px;/* Space between lines */
+  background: rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .quad:hover {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.45);
+  transform: scale(1.02);
 }
-
 .page {
   padding: 40px;
   text-align: center;
 }
+/* logo image */
+.center-logo img {
+  max-width: 100%;
+  max-height: 125%;
+}
+.landing {
+  position: relative;
+}
 
-/* Horizontal scroll (Traditions) */
-.scroll-row {
+.center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px; /* slightly taller than wide */
+  background: #ffffff;
+  border: 4px solid #cfcfcf;
   display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 20px 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }
 
-.scroll-row img {
-  height: 180px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-/* Gallery timeline */
+/* CSS for Gallery timeline */
 .timeline {
   display: flex;
   overflow: hidden;
@@ -75,6 +103,9 @@ h1, h2 {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
+
+/* CSS for Traditions */
 
 /* Modal */
 .modal {
@@ -120,6 +151,20 @@ h1, h2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+/* Horizontal scroll (Traditions) */
+.scroll-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.scroll-row img {
+  height: 180px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 /* Dark overlay for readability */
