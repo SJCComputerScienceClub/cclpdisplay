@@ -67,12 +67,11 @@ h1, h2 {
 }
 
 .center-logo {
+  
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transform-origin: center center; /* ensures perfect scaling */
-  
   width: 300px;
   height: 400px; /* slightly taller than wide */
   background: #ffffff;
