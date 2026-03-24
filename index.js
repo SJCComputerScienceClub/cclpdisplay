@@ -16,6 +16,7 @@ document.querySelectorAll(".quad").forEach(item => {
     logo.style.width = "120vw";
     logo.style.height = "120vh";
     logo.style.borderRadius = "0";
+    logo.style.opacity = "0.9";
 
     // optional: fade out background grid
     document.querySelector(".grid").style.opacity = "0";
