@@ -36,8 +36,12 @@ function startCountdown() {
       const quizBox = document.getElementById("quiz-box");
       quizBox.style.display = "block";
       // Fade-in animation
-      setTimeout(() => quizBox.classList.add("show"), 50);
+      quizBox.style.display = "block";
+
+      requestAnimationFrame(() => {
+      quizBox.classList.add("show");
       loadQuestion();
+      });
     }
   }, 1000);
 }
