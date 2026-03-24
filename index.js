@@ -1,4 +1,3 @@
-
 document.querySelectorAll(".quad").forEach(item => {
   item.addEventListener("click", function(e) {
     e.preventDefault();
@@ -6,18 +5,21 @@ document.querySelectorAll(".quad").forEach(item => {
     const link = this.getAttribute("href");
     const logo = document.querySelector(".center-logo");
 
-    // expand logo
-    logo.style.transition = "all 0.5s ease";
-    logo.style.width = "100vw";
-    logo.style.height = "100vh";
-    logo.style.borderRadius = "0";
-    logo.style.top = "0";
-    logo.style.left = "0";
-    logo.style.transform = "none";
+    // lock center positioning
+    logo.style.top = "50%";
+    logo.style.left = "50%";
 
-    // delay page load
+    // animate from center
+    logo.style.transition = "all 0.5s ease";
+    logo.style.transform = "translate(-50%, -50%) scale(10)";
+    logo.style.borderRadius = "0";
+
+    // OPTIONAL: fade grid out
+    document.querySelector(".grid").style.opacity = "0";
+
     setTimeout(() => {
       window.location.href = link;
     }, 500);
   });
 });
+
