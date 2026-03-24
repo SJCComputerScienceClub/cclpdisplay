@@ -29,12 +29,6 @@ h1, h2 {
   color: #cfcfcf; /* gray */
 }
 
-.landing .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  height: 100vh;
-}
 
 .quad {
   display: flex;
@@ -96,7 +90,7 @@ h1, h2 {
 /* CSS for Gallery timeline */
 
 
-/*
+
 .timeline {
   display: flex;
   overflow: hidden;
@@ -119,7 +113,7 @@ h1, h2 {
   to { transform: translateX(-50%); }
 }
 
-*/
+
 
 /* CSS for Traditions */
 
@@ -280,5 +274,5 @@ h1, h2 {
   font-style: normal;
 }
 
-
+/*Trivia*/
 }
