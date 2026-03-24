@@ -8,9 +8,31 @@
 <body>
 <div class="page">
 <div class="back-btn"><a href="index.html">← Back</a></div>
+<div class="close-btn" onclick="exitGame()">✖</div>
 
-<h1>Welcome to CCLP Trivia!</h1>
-<h2>Would you pass the 2025 Promotion Board Review?</h2>
+<div class="container">
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div>Can You Pass the Promotional Board?</div>
+    <div id="countdown">5</div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz-box">
+    <div class="question" id="question"></div>
+    <div class="answers" id="answers"></div>
+    <button id="final-btn" onclick="submitAnswer()">Final Answer</button>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results">
+    <h2 id="score"></h2>
+    <p id="result-message"></p>
+    <button class="retry-btn" onclick="startGame()">Retry?</button>
+  </div>
+
+</div>
 
 <div class="questionOneSection">
   <!-- Insert JS code-->
