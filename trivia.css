@@ -1,7 +1,7 @@
-body {
+/*body {
   margin: 0;
-  /*font-family: "Sorts Mill Goudy", serif;*/
-  /*background: linear-gradient(to bottom right, #7a0000, #000000);*/
+  font-family: "Sorts Mill Goudy", serif;
+  background: linear-gradient(to bottom right, #7a0000, #000000);
   color: white;
   height: 100vh;
   display: flex;
@@ -9,7 +9,7 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
-}
+}*/
 
 /* CLOSE BUTTON */
 .close-btn {
