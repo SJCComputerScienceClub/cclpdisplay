@@ -67,19 +67,23 @@ h1, h2 {
 }
 
 .center-logo {
-  
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 400px; /* slightly taller than wide */
-  background: #ffffff;
+  
+  width: 150px;
+  height: 200px;
+
+  background: white;
   border: 4px solid #cfcfcf;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   z-index: 10;
+  overflow: hidden; /* keeps logo clean */
 }
 
 /* CSS for Gallery timeline */
