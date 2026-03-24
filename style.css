@@ -61,8 +61,9 @@ h1, h2 {
 }
 /* logo image */
 .center-logo img {
-  max-width: 100%;
-  max-height: 125%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .landing {
   position: relative;
