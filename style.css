@@ -95,16 +95,6 @@ h1, h2 {
 
 /* CSS for Gallery timeline */
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, #7a0000, #000000);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
 /* CLOSE BUTTON */
 .close-btn {
