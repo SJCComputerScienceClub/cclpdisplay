@@ -12,6 +12,8 @@ document.querySelectorAll(".quad").forEach(item => {
     logo.style.transform = "translate(-50%, -50%)";
 
     // animate expansion (NOT scale)
+    logo.style.width = getComputedStyle(logo).width;
+    logo.style.height = getComputedStyle(logo).height;
     logo.style.transition = "all 0.6s ease";
     logo.style.width = "120vw";
     logo.style.height = "120vh";
