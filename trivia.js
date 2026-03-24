@@ -1,104 +1,76 @@
-
 const questions = [
-  {
-    question: "What does CCLP stand for?",
-    options: ["Cadet Corps Leadership Program", "Central Command Learning Plan", "Cadet Code Logistics Plan", "None"],
-    answer: 0
-  },
-  {
-    question: "What is leadership?",
-    options: ["Power", "Influence", "Control", "Authority"],
-    answer: 1
-  },
-  {
-    question: "Which is a key leadership trait?",
-    options: ["Laziness", "Integrity", "Silence", "Speed"],
-    answer: 1
-  },
-
-  // STUDENTS CAN ADD UNLIMITED QUESTIONS HERE
+  { question: "What does CCLP stand for?", options: ["Cadet Corps Leadership Program", "Central Command Learning Plan", "Cadet Code Logistics Plan", "None"], answer: 0 },
+  { question: "What is leadership?", options: ["Power", "Influence", "Control", "Authority"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  // Add unlimited questions here
 ];
-
-
-/* 
-   GAME LOGIC
- */
 
 let selectedQuestions = [];
 let currentIndex = 0;
 let score = 0;
 let selectedAnswer = null;
 
-/* RANDOMLY PICK 5 QUESTIONS */
 function getRandomQuestions() {
   let shuffled = [...questions].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, 5);
 }
 
-/* START GAME */
 function startGame() {
   document.getElementById("results").style.display = "none";
   document.getElementById("intro").style.display = "block";
-
   selectedQuestions = getRandomQuestions();
   currentIndex = 0;
   score = 0;
-
   startCountdown();
 }
 
-/* COUNTDOWN */
 function startCountdown() {
   let count = 5;
   const countdownEl = document.getElementById("countdown");
-
   const timer = setInterval(() => {
     count--;
     countdownEl.textContent = count;
-
     if (count === 0) {
       clearInterval(timer);
       document.getElementById("intro").style.display = "none";
-      document.getElementById("quiz-box").style.display = "block";
+      const quizBox = document.getElementById("quiz-box");
+      quizBox.style.display = "block";
+      // Fade-in animation
+      setTimeout(() => quizBox.classList.add("show"), 50);
       loadQuestion();
     }
   }, 1000);
 }
 
-/* LOAD QUESTION */
 function loadQuestion() {
   selectedAnswer = null;
-
   const q = selectedQuestions[currentIndex];
-  document.getElementById("question").textContent = q.question;
+  const quizBox = document.getElementById("quiz-box");
 
-  const answersDiv = document.getElementById("answers");
-  answersDiv.innerHTML = "";
-
-  q.options.forEach((option, index) => {
-    const btn = document.createElement("button");
-    btn.textContent = option;
-
-    btn.onclick = () => {
-      document.querySelectorAll(".answers button").forEach(b => b.classList.remove("selected"));
-      btn.classList.add("selected");
-      selectedAnswer = index;
-    };
-
-    answersDiv.appendChild(btn);
-  });
+  // Animate fade out and in
+  quizBox.classList.remove("show");
+  setTimeout(() => {
+    document.getElementById("question").textContent = q.question;
+    const answersDiv = document.getElementById("answers");
+    answersDiv.innerHTML = "";
+    q.options.forEach((option, index) => {
+      const btn = document.createElement("button");
+      btn.textContent = option;
+      btn.onclick = () => {
+        document.querySelectorAll(".answers button").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        selectedAnswer = index;
+      };
+      answersDiv.appendChild(btn);
+    });
+    quizBox.classList.add("show");
+  }, 300);
 }
 
-/* SUBMIT ANSWER */
 function submitAnswer() {
   if (selectedAnswer === null) return;
-
-  if (selectedAnswer === selectedQuestions[currentIndex].answer) {
-    score++;
-  }
-
+  if (selectedAnswer === selectedQuestions[currentIndex].answer) score++;
   currentIndex++;
-
   if (currentIndex < selectedQuestions.length) {
     loadQuestion();
   } else {
@@ -106,34 +78,26 @@ function submitAnswer() {
   }
 }
 
-/* SHOW RESULTS */
 function showResults() {
-  document.getElementById("quiz-box").style.display = "none";
-  document.getElementById("results").style.display = "block";
-
-  document.getElementById("score").textContent = `Score: ${score} / 5`;
-
-  let message = "";
-
-  /* 
-     RESULT MESSAGES (STUDENTS EDIT)
-     */
-  if (score === 5) {
-    message = "🏆 Outstanding performance! Promotion approved.";
-  } else if (score >= 3) {
-    message = "👍 Solid effort. Review and try again.";
-  } else {
-    message = "⚠️ Additional training required. Try again.";
-  }
-
-  document.getElementById("result-message").textContent = message;
+  const quizBox = document.getElementById("quiz-box");
+  quizBox.classList.remove("show");
+  setTimeout(() => {
+    quizBox.style.display = "none";
+    const results = document.getElementById("results");
+    results.style.display = "block";
+    results.style.opacity = 0;
+    setTimeout(() => results.style.opacity = 1, 50);
+    document.getElementById("score").textContent = `Score: ${score} / 5`;
+    let message = "";
+    if (score === 5) message = "🏆 Outstanding performance! Promotion approved.";
+    else if (score >= 3) message = "👍 Solid effort. Review and try again.";
+    else message = "⚠️ Additional training required. Try again.";
+    document.getElementById("result-message").textContent = message;
+  }, 300);
 }
 
-/* EXIT GAME */
 function exitGame() {
   window.location.href = "index.html";
 }
 
-/* INIT */
 startGame();
-

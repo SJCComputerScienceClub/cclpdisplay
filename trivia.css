@@ -3,8 +3,9 @@
   position: absolute;
   top: 15px;
   right: 20px;
-  font-size: 28px;
+  font-size: 32px;
   cursor: pointer;
+  z-index: 10;
 }
 
 /* CENTER CONTAINER */
@@ -12,6 +13,10 @@
   text-align: center;
   width: 90%;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* INTRO TEXT */
@@ -28,28 +33,44 @@
 #quiz-box {
   display: none;
   background: #111;
-  padding: 25px;
+  padding: 30px;
   border: 2px solid #ccc;
+  border-radius: 0; /* square corners */
+  width: 100%;
+  max-width: 600px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+}
+
+/* FADE IN CLASS */
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .question {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  margin-bottom: 25px;
 }
 
+/* BIGGER TOUCH-FRIENDLY BUTTONS */
 .answers button {
   display: block;
   width: 100%;
-  margin: 8px 0;
-  padding: 12px;
+  margin: 12px 0;
+  padding: 18px;
   background: #333;
   color: white;
   border: none;
   cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .answers button:hover {
   background: #555;
+  transform: scale(1.03);
 }
 
 .selected {
@@ -59,23 +80,30 @@
 /* FINAL ANSWER BUTTON */
 #final-btn {
   margin-top: 20px;
-  padding: 12px 20px;
+  padding: 16px 24px;
   background: #a00000;
   border: none;
   color: white;
   cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
 }
 
 /* RESULTS */
 #results {
   display: none;
+  text-align: center;
+  max-width: 600px;
+  transition: opacity 0.5s ease;
 }
 
 .retry-btn {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 16px 24px;
   background: #a00000;
   border: none;
   color: white;
   cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
 }
