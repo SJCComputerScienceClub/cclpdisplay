@@ -39,8 +39,8 @@ function startCountdown() {
       quizBox.style.display = "block";
 
       requestAnimationFrame(() => {
-      quizBox.classList.add("show");
-      loadQuestion();
+        quizBox.classList.add("show");
+        loadQuestion();
       });
     }
   }, 1000);
