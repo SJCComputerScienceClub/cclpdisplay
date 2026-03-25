@@ -1,38 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Gallery Timeline</title>
-<link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>CCLP Gallery</title>
+<link rel="stylesheet" href="gallery.css">
 </head>
-<body class="sorts-mill-goudy-regular">
-<div class="page">
-<h1>Gallery Timeline</h1>
- <div class="back-btn"><a href="index.html">← Back</a></div>
 
-<p>Moments from decades of Cadet Corps history.</p>
+<body>
 
+<!-- BACK BUTTON -->
+<a href="index.html" class="back-button">← Back</a>
 
-<div class="timeline">
-<div class="timeline-track">
-<img src="event1.jpg" onclick="openModal(this, 'Founding Ceremony')" />
-<img src="event2.jpg" onclick="openModal(this, 'Historic Parade')" />
-<img src="event3.jpg" onclick="openModal(this, 'Leadership Retreat')" />
-<!-- duplicate images for seamless loop -->
-<img src="event1.jpg" onclick="openModal(this, 'Founding Ceremony')" />
-<img src="event2.jpg" onclick="openModal(this, 'Historic Parade')" />
+<header class="page-header">
+  <h1>CCLP Gallery</h1>
+  <p>Moments from the history of the Cadet Corps Leadership Program</p>
+</header>
+
+<!-- GALLERY CONTAINER -->
+<div class="gallery-container">
+
+  <!-- ===== DECADE BLOCK ===== -->
+  <section class="decade-section">
+    <div class="decade-label left">1990s</div>
+
+    <div class="gallery-grid">
+      
+      <!-- IMAGE CARD -->
+      <div class="gallery-item" 
+           data-title="Formation of CCLP"
+           data-description="The Cadet Corps Leadership Program begins."
+           data-year="1994">
+        <img src="images/placeholder1.jpg" alt="">
+      </div>
+
+      <div class="gallery-item" 
+           data-title="Early Training"
+           data-description="First leadership exercises conducted."
+           data-year="1996">
+        <img src="images/placeholder2.jpg" alt="">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== DECADE BLOCK ===== -->
+  <section class="decade-section">
+    <div class="decade-label right">2000s</div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" 
+           data-title="Program Expansion"
+           data-description="More cadets join the program."
+           data-year="2003">
+        <img src="images/placeholder3.jpg" alt="">
+      </div>
+
+      <div class="gallery-item" 
+           data-title="Community Service"
+           data-description="Serving the local community."
+           data-year="2007">
+        <img src="images/placeholder4.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DECADE BLOCK ===== -->
+  <section class="decade-section">
+    <div class="decade-label left">2010s</div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item"
+           data-title="Leadership Camp"
+           data-description="Cadets attend annual camp."
+           data-year="2015">
+        <img src="images/placeholder5.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
 </div>
-</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+
+    <button class="close-btn" onclick="closeModal()">✕</button>
+
+    <img id="modal-img" src="" alt="">
+
+    <div class="modal-text">
+      <h2 id="modal-title"></h2>
+      <p id="modal-year"></p>
+      <p id="modal-description"></p>
+    </div>
+
+  </div>
 </div>
 
+<script src="gallery.js"></script>
 
-<div class="modal" id="modal" onclick="closeModal()">
-<div class="modal-content">
-<img id="modalImg" />
-<p id="modalText"></p>
-</div>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
