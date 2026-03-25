@@ -123,3 +123,10 @@ body {
   font-size: 20px;
   border-radius: 6px;
 }
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
