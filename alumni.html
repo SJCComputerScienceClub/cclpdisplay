@@ -2,31 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Coming Soon</title>
+<title>Alumni</title>
 <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="sorts-mill-goudy-regular">
+
 <div class="page">
-<h1>Alumni</h1>
-<p>Discover our alumni that have helped to define our Cadet Corps leadership program.</p>
- <div class="back-btn"><a href="index.html">← Back</a></div>
+  <h1>Alumni</h1>
+  <p>Discover our alumni that have helped define the Cadet Corps Leadership Program.</p>
 
+  <div class="back-btn"><a href="index.html">← Back</a></div>
 
-<div class="scroll-row">
-<img src="assets/images/Vice Admiral James Malloy.jpg" onclick="openModal(this, 'Distinguished Alumnus – Class of 1995')" />
-<img src="alumni2.jpg" onclick="openModal(this, 'Cadet Commander – Class of 2001')" />
-<img src="alumni3.jpg" onclick="openModal(this, 'Service Award Recipient')" />
+  <!-- SCROLLING ROW -->
+  <div class="alumni-row">
+
+    <!-- CARD -->
+    <div class="alumni-card" onclick="openAlumni(this)">
+      <img src="assets/images/Vice Admiral James Malloy.jpg">
+      <p>Vice Admiral James Malloy</p>
+
+      <!-- HIDDEN BIO -->
+      <div class="bio">
+        <h2>Vice Admiral James Malloy</h2>
+        <p>Class of 1995</p>
+        <p>
+          Vice Admiral Malloy has served in numerous leadership roles in the United States Navy.
+          His career reflects the values of leadership, discipline, and service developed through the Cadet Corps Leadership Program.
+        </p>
+      </div>
+    </div>
+
+    <!-- DUPLICATE FOR MORE ALUMNI -->
+    <div class="alumni-card" onclick="openAlumni(this)">
+      <img src="alumni2.jpg">
+      <p>Cadet Commander Smith</p>
+
+      <div class="bio">
+        <h2>Cadet Commander Smith</h2>
+        <p>Class of 2001</p>
+        <p>
+          Led the corps with distinction and went on to serve in public service leadership roles.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+<!-- DETAIL VIEW -->
+<div class="detail-view" id="detailView">
+  <div class="detail-card" id="detailCard">
+
+    <div class="back-btn" onclick="closeAlumni()">← Back</div>
+
+    <div class="alumni-detail-content">
+      <img id="detailImg">
+      <div class="text">
+        <h2 id="detailName"></h2>
+        <p id="detailBio"></p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
+<script src="alumni.js"></script>
 
-<div class="modal" id="modal" onclick="closeModal()">
-<div class="modal-content">
-<img id="modalImg" />
-<p id="modalText"></p>
-</div>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>

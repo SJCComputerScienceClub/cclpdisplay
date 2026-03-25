@@ -271,4 +271,82 @@ h1, h2 {
   font-style: normal;
 }
 
-/*Trivia*/
+/*Alumni*/
+
+/* ALUMNI ROW (horizontal swipe) */
+.alumni-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 30px 10px;
+  scroll-snap-type: x mandatory;
+}
+
+/* CARD STYLE */
+.alumni-card {
+  min-width: 220px;
+  flex: 0 0 auto;
+  background: rgba(0,0,0,0.3);
+  border: 4px solid rgba(255,255,255,0.8);
+  border-radius: 0;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  scroll-snap-align: center;
+  transition: transform 0.2s;
+}
+
+.alumni-card:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGE */
+.alumni-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* NAME */
+.alumni-card p {
+  margin-top: 10px;
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1.1rem;
+}
+
+/* HIDDEN BIO DATA */
+.bio {
+  display: none;
+}
+
+/* DETAIL CONTENT LAYOUT */
+.alumni-detail-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* IMAGE LEFT */
+.alumni-detail-content img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* TEXT RIGHT */
+.alumni-detail-content .text {
+  text-align: left;
+}
+
+/* MOBILE / iPad ADJUSTMENT */
+@media (max-width: 768px) {
+  .alumni-detail-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .alumni-detail-content .text {
+    text-align: center;
+  }
+}
