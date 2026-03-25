@@ -231,7 +231,7 @@ h1, h2 {
   transform: scale(0.6) rotateY(90deg);
   transition: transform 0.4s ease;
   position: relative;
-  padding: 20px;
+  padding: 50px 20px 20px 20px; 
   overflow-y: auto;
 }
 
@@ -247,6 +247,7 @@ h1, h2 {
   left: 20px;
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 10;
 }
 
 /* CONTENT */
@@ -324,6 +325,7 @@ h1, h2 {
   display: flex;
   gap: 20px;
   align-items: flex-start;
+  margin-top: 40px;
 }
 
 /* IMAGE LEFT */
