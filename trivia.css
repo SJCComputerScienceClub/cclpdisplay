@@ -10,7 +10,9 @@ body {
   overflow: visible;
   position: relative;
 }
-
+a:visited {
+  color: white;  
+}
 /* CLOSE BUTTON */
 .close-btn {
   position: absolute;
