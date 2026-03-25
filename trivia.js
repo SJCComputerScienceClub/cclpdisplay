@@ -37,25 +37,29 @@ function startGame() {
 function startCountdown() {
   let count = 5;
   const countdownEl = document.getElementById("countdown");
+
   const timer = setInterval(() => {
     count--;
     countdownEl.textContent = count;
+
     if (count === 0) {
       clearInterval(timer);
+
       document.getElementById("intro").style.display = "none";
+
       const quizBox = document.getElementById("quiz-box");
-      // Fade-in animation
       quizBox.style.display = "block";
 
-      requestAnimationFrame(() => {
-        quizBox.classList.add("show");
-        loadQuestion();
-      });
+      // FORCE visibility immediately
+      quizBox.style.opacity = "1";
+
+      loadQuestion();
     }
   }, 1000);
 }
 
 function loadQuestion() {
+  console.log("Loading question:", q);
   selectedAnswer = null;
   const q = selectedQuestions[currentIndex];
 
@@ -84,6 +88,7 @@ function loadQuestion() {
     };
 
     answersDiv.appendChild(btn);
+    
   });
 
   // THEN animate (more reliable)
