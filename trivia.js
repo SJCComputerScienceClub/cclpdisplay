@@ -2,6 +2,16 @@ const questions = [
   { question: "What does CCLP stand for?", options: ["Cadet Corps Leadership Program", "Central Command Learning Plan", "Cadet Code Logistics Plan", "None"], answer: 0 },
   { question: "What is leadership?", options: ["Power", "Influence", "Control", "Authority"], answer: 1 },
   { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  
   // Add unlimited questions here
 ];
 
