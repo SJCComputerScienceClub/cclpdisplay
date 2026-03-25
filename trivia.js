@@ -49,26 +49,39 @@ function startCountdown() {
 function loadQuestion() {
   selectedAnswer = null;
   const q = selectedQuestions[currentIndex];
+
+  if (!q) {
+    console.error("No question found.");
+    return;
+  }
+
   const quizBox = document.getElementById("quiz-box");
 
-  // Animate fade out and in
+  // Load content FIRST
+  document.getElementById("question").textContent = q.question;
+
+  const answersDiv = document.getElementById("answers");
+  answersDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const btn = document.createElement("button");
+    btn.textContent = option;
+
+    btn.onclick = () => {
+      document.querySelectorAll(".answers button").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      selectedAnswer = index;
+    };
+
+    answersDiv.appendChild(btn);
+  });
+
+  // THEN animate (more reliable)
   quizBox.classList.remove("show");
-  setTimeout(() => {
-    document.getElementById("question").textContent = q.question;
-    const answersDiv = document.getElementById("answers");
-    answersDiv.innerHTML = "";
-    q.options.forEach((option, index) => {
-      const btn = document.createElement("button");
-      btn.textContent = option;
-      btn.onclick = () => {
-        document.querySelectorAll(".answers button").forEach(b => b.classList.remove("selected"));
-        btn.classList.add("selected");
-        selectedAnswer = index;
-      };
-      answersDiv.appendChild(btn);
-    });
+
+  requestAnimationFrame(() => {
     quizBox.classList.add("show");
-  }, 300);
+  });
 }
 
 function submitAnswer() {
