@@ -58,16 +58,16 @@ function startCountdown() {
   }, 1000);
 }
 
-function loadQuestion() {
-  console.log("Loading question:", q);
+ffunction loadQuestion() {
   selectedAnswer = null;
+
   const q = selectedQuestions[currentIndex];
+  console.log("Loading question:", q);
 
   if (!q) {
-  console.error("Question not found at index:", currentIndex);
-  return;
-}
-
+    console.error("Question not found at index:", currentIndex);
+    return;
+  }
 
   const quizBox = document.getElementById("quiz-box");
 
@@ -88,10 +88,9 @@ function loadQuestion() {
     };
 
     answersDiv.appendChild(btn);
-    
   });
 
-  // THEN animate (more reliable)
+  // Animate
   quizBox.classList.remove("show");
 
   requestAnimationFrame(() => {
