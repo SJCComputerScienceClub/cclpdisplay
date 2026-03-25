@@ -58,7 +58,7 @@ function startCountdown() {
   }, 1000);
 }
 
-ffunction loadQuestion() {
+function loadQuestion() {
   selectedAnswer = null;
 
   const q = selectedQuestions[currentIndex];
@@ -99,9 +99,17 @@ ffunction loadQuestion() {
 }
 
 function submitAnswer() {
-  if (selectedAnswer === null) return;
-  if (selectedAnswer === selectedQuestions[currentIndex].answer) score++;
+  if (selectedAnswer === null) {
+    alert("Select an answer first!");
+    return;
+  }
+
+  if (selectedAnswer === selectedQuestions[currentIndex].answer) {
+    score++;
+  }
+
   currentIndex++;
+
   if (currentIndex < selectedQuestions.length) {
     loadQuestion();
   } else {
