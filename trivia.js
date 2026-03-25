@@ -11,7 +11,7 @@ const questions = [
   { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
   { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
   { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  
+
   // Add unlimited questions here
 ];
 
@@ -22,7 +22,7 @@ let selectedAnswer = null;
 
 function getRandomQuestions() {
   let shuffled = [...questions].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, 5);
+  return shuffled.slice(0, Math.min(5, questions.length));
 }
 
 function startGame() {
@@ -44,7 +44,6 @@ function startCountdown() {
       clearInterval(timer);
       document.getElementById("intro").style.display = "none";
       const quizBox = document.getElementById("quiz-box");
-      quizBox.style.display = "block";
       // Fade-in animation
       quizBox.style.display = "block";
 
@@ -61,9 +60,10 @@ function loadQuestion() {
   const q = selectedQuestions[currentIndex];
 
   if (!q) {
-    console.error("No question found.");
-    return;
-  }
+  console.error("Question not found at index:", currentIndex);
+  return;
+}
+
 
   const quizBox = document.getElementById("quiz-box");
 
