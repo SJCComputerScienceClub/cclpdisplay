@@ -7,9 +7,8 @@ body {
   background-color: #8b0000; /* scarlet */
   color: white;
 }
-h1, p{
+body, h1, h2, h3, p, a {
   font-family: "Sorts Mill Goudy", serif;
-
 }
 a:visited {
   color: white;
@@ -407,6 +406,46 @@ h1, h2 {
   }
 
   .alumni-detail-content .text {
+    text-align: center;
+  }
+}
+
+/* LEFT SIDE (image + name stacked) */
+.image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+/* IMAGE */
+.image-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* NAME UNDER IMAGE */
+.image-block h2 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "Sorts Mill Goudy", serif;
+}
+
+/* RIGHT SIDE TEXT */
+.alumni-detail-content .text {
+  flex: 1;
+  text-align: left;
+  font-family: "Sorts Mill Goudy", serif;
+}
+@media (max-width: 768px) {
+  .alumni-detail-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text {
     text-align: center;
   }
 }
