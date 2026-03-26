@@ -402,7 +402,8 @@ h1, h2 {
 .alumni-detail-content img {
   width: 250px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0px;
+  object-fit: contain;
 }
 
 /* TEXT RIGHT */
