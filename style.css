@@ -77,8 +77,8 @@ h1, h2 {
 
 .center-logo {
 
-  position: absolute; /* keeps it above the grid */
-  
+  position: absolute;  /* KEEP THIS */
+
   width: 300px;
   height: 400px;
 
