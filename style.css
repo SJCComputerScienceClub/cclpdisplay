@@ -162,6 +162,8 @@ h1, h2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  font-family: "Sorts Mill Goudy", serif;
+  background-color: #8b0000; /* scarlet */
 }
 .tradition-card::after {
   content: "";
@@ -173,13 +175,12 @@ h1, h2 {
   background-position: center;
   background-repeat: no-repeat;
 
-  opacity: 0.6; /* watermark effect */
+  opacity: 0.55;
+  filter: grayscale(20%) contrast(90%);
 
   z-index: 0;
 }
-.tradition-card img {
-  opacity: .8;
-}
+
 
 /* Horizontal scroll (Traditions) */
 .scroll-row {
