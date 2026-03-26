@@ -7,7 +7,7 @@ body {
   background-color: #8b0000; /* scarlet */
   color: white;
 }
-h1 p{
+h1, p{
   font-family: "Sorts Mill Goudy", serif;
 
 }
@@ -164,6 +164,10 @@ h1, h2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.tradition-card img {
+  opacity: .8;
 }
 
 /* Horizontal scroll (Traditions) */
