@@ -7,8 +7,14 @@ body {
   background-color: #8b0000; /* scarlet */
   color: white;
 }
+h1 {
+  font-family: "Sorts Mill Goudy", serif;
+
+}
 a:visited {
   color: white;
+  font-family: "Sorts Mill Goudy", serif;
+
 }
 .grid {
   transition: opacity 0.4s ease;
