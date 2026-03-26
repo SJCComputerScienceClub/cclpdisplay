@@ -1,16 +1,19 @@
 const questions = [
   { question: "What does CCLP stand for?", options: ["Cadet Corps Leadership Program", "Central Command Learning Plan", "Cadet Code Logistics Plan", "None"], answer: 0 },
-  { question: "What is leadership?", options: ["Power", "Influence", "Control", "Authority"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
-  { question: "Which is a key leadership trait?", options: ["Laziness", "Integrity", "Silence", "Speed"], answer: 1 },
+  { question: "This is a place holder question", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question2", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question3", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question4", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question5", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question6", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question7", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question8", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question9", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question10", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question11", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question12", options: ["One", "Two", "Three", "Four"], answer: 2 },
+  { question: "This is a place holder question13", options: ["One", "Two", "Three", "Four"], answer: 2 },
+
 
   // Add unlimited questions here
 ];
