@@ -7,6 +7,10 @@ body {
   background-color: #8b0000; /* scarlet */
   color: white;
 }
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
 body, h1, h2, h3, p, a {
   font-family: "Sorts Mill Goudy", serif;
 }
