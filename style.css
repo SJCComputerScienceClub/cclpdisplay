@@ -410,6 +410,9 @@ h1, h2 {
 /* TEXT RIGHT */
 .alumni-detail-content .text {
   text-align: left;
+  font-family: "Sorts Mill Goudy", serif;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* MOBILE / iPad ADJUSTMENT */
