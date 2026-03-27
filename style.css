@@ -477,3 +477,11 @@ h1, h2 {
 .alumni-detail-content .text > *:first-child {
   margin-top: 0;
 }
+
+.alumni-detail-content .text h2 {
+  margin-top: 0;
+}
+
+.alumni-detail-content .text p {
+  margin-top: 8px;
+}
