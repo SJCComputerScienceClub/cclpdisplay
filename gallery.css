@@ -10,7 +10,9 @@ body {
   text-align: center;
   padding: 40px 20px 20px;
 }
-
+body, h1, h2, h3, p, a {
+  font-family: "Sorts Mill Goudy", serif;
+}
 /* BACK BUTTON */
 .back-button {
   position: fixed;
