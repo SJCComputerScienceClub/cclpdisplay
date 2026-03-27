@@ -474,3 +474,6 @@ h1, h2 {
     text-align: center;
   }
 }
+.alumni-detail-content .text > *:first-child {
+  margin-top: 0;
+}
