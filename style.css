@@ -441,8 +441,7 @@ h1, h2 {
 /* IMAGE */
 .image-block img {
   width: auto;
-  max-height: auto;
-  border-radius: 0px;
+  max-height: 260px;
   object-fit: contain;
 }
 
