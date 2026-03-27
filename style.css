@@ -456,19 +456,12 @@ h1, h2 {
 }
 
 /* RIGHT SIDE TEXT */
-.alumni-detail-content .text p{
-  flex: 1;
-  text-align: left;
-  font-family: "Sorts Mill Goudy", serif;
 
-  height: 100%;
-  overflow-y: auto;
-  padding-right: 10px;
-  
-}
 .alumni-detail-content .text{
   flex: 1;
   text-align: left;
+  height: 100%;
+  overflow-y:auto;
   font-family: "Sorts Mill Goudy", serif;
   -webkit-overflow-scrolling: touch;
   position: relative;
